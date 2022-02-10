@@ -17,4 +17,8 @@ contract MintMine is ERC1155, Ownable{
     function burn(address from, uint256 id) public {
         _burn(from, id, 1);
     }
+
+    function transfer(address from,address to,uint256 id) public {
+        safeTransferFrom(from,to,id,1,"");
+    }
 }

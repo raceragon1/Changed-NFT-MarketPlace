@@ -382,6 +382,29 @@
 				"inputs": [
 					{
 						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					}
+				],
+				"name": "transfer",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
 						"name": "newOwner",
 						"type": "address"
 					}
@@ -473,11 +496,11 @@
 	},
 	"sources": {
 		"MintMine.sol": {
-			"keccak256": "0xe77fe9c1835e5761f5295c65df5d52580849959e6b0b0102644c1e05db41576e",
+			"keccak256": "0x6a9a04901b6aec73ebdde1e11f69629c374892df02d3afbb37134776e8598063",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://f24b61a2abb19371f51b64d9d964cbadcf8c17e44ef1c67b464e899bf2aa187d",
-				"dweb:/ipfs/QmdFf18rCjmSCPJ56FvWALSKB81eq8cryWJAN6ktQssD18"
+				"bzz-raw://42f1337fd5eca1838aeca2d7c652fe8766413c1cf6e042e60f8841bb5258011e",
+				"dweb:/ipfs/QmbSbvSAudeJJLj3F4iBrpDVQocWQ2UQTgxm3e6gVwMFfx"
 			]
 		},
 		"https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/access/Ownable.sol": {
