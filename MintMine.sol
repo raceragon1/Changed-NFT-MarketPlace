@@ -1,24 +1,31 @@
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity 0.8.11;
 
-import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC1155/ERC1155.sol";
+import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol";
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/access/Ownable.sol";
 
-contract MintMine is ERC1155, Ownable{
+contract MintMine is ERC721, Ownable{
 
-    constructor() ERC1155(""){
+    event minted(uint256 value);
+    event burnt(uint256 value);
+    event transfered(uint256 value);
+
+    constructor() ERC721("",""){
 
     }
 
     function mint(address to, uint256 id) public onlyOwner{
-        _mint(to, id, 1,"");
+        _mint(to, id);
+        emit minted(_id);
     }
 
-    function burn(address from, uint256 id) public {
-        _burn(from, id, 1);
+    function burn(uint256 id) public onlyOwner {
+        _burn(id);
+        emit burnt(_id);
     }
 
-    function transfer(address from,address to,uint256 id) public {
-        safeTransferFrom(from,to,id,1,"");
+    function transfer(address from,address to,uint256 id) public onlyOwner {
+        safeTransferFrom(from,to,id);
+        emit transfered(_id);
     }
 }
