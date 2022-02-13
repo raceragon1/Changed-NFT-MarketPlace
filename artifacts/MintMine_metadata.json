@@ -105,6 +105,45 @@
 				"type": "event"
 			},
 			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					}
+				],
+				"name": "burnt",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					}
+				],
+				"name": "minted",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					}
+				],
+				"name": "transfered",
+				"type": "event"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "address",
@@ -145,7 +184,7 @@
 				"inputs": [
 					{
 						"internalType": "uint256",
-						"name": "id",
+						"name": "_id",
 						"type": "uint256"
 					}
 				],
@@ -201,12 +240,12 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "to",
+						"name": "_to",
 						"type": "address"
 					},
 					{
 						"internalType": "uint256",
-						"name": "id",
+						"name": "_id",
 						"type": "uint256"
 					}
 				],
@@ -391,17 +430,17 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "from",
+						"name": "_from",
 						"type": "address"
 					},
 					{
 						"internalType": "address",
-						"name": "to",
+						"name": "_to",
 						"type": "address"
 					},
 					{
 						"internalType": "uint256",
-						"name": "id",
+						"name": "_id",
 						"type": "uint256"
 					}
 				],
@@ -524,11 +563,11 @@
 	},
 	"sources": {
 		"MintMine.sol": {
-			"keccak256": "0x8e79a8e5e973f311420f3d361ed17685fb4d5279a68e7f033835ebfee06892dd",
+			"keccak256": "0xec75630497bf4214123c9a1536cad6d2267d12c981f79c3ac242106f471653c5",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://53e212b86d8f1c8e79e3987d947875a94bf17719cf7faf6c7488f60db9645987",
-				"dweb:/ipfs/QmRErQUgXfvqP9gkZF9fTESoArmso7e1dgfGc2rAaqGRGh"
+				"bzz-raw://bdaa0bd8fbeaf235ff4eb79b691e38758ecf8e65cd24eb88b97d2d11cf6577ed",
+				"dweb:/ipfs/Qmao8fsNMWJzbpTUskrMk9yETFyPpHx1hvjUNeUPni6GAv"
 			]
 		},
 		"https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/access/Ownable.sol": {

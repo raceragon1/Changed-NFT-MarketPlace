@@ -14,18 +14,19 @@ contract MintMine is ERC721, Ownable{
 
     }
 
-    function mint(address to, uint256 id) public onlyOwner{
-        _mint(to, id);
+    function mint(address _to, uint256 _id) public onlyOwner{
+        _mint(_to, _id);
         emit minted(_id);
     }
 
-    function burn(uint256 id) public onlyOwner {
-        _burn(id);
+    function burn(uint256 _id) public onlyOwner {
+        _burn(_id);
         emit burnt(_id);
     }
 
-    function transfer(address from,address to,uint256 id) public onlyOwner {
-        safeTransferFrom(from,to,id);
+    function transfer(address _from,address _to,uint256 _id) public onlyOwner {
+        safeTransferFrom(_from,_to,_id);
         emit transfered(_id);
     }
 }
+
