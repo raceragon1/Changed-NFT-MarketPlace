@@ -8,8 +8,10 @@ contract MintMine is ERC721, Ownable{
 
     uint256 tokenCounter;
 
+
     mapping(uint256 => address) tokenIdToAddress;
     mapping(uint256 => string) tokenIdtoTokenUri;
+    mapping(string => bool) URIs;
 
     event Created(uint256 value);
     event Minter(address value);
@@ -26,6 +28,8 @@ contract MintMine is ERC721, Ownable{
 
 
     function Create(string memory _tokenURI) public{
+        require(!URIs[_tokenURI], "Token URI already exists");
+        URIs[_tokenURI] = true;
         uint256 _tokenId = tokenCounter;
         tokenIdtoTokenUri[_tokenId] = _tokenURI;
         tokenIdToAddress[_tokenId] = msg.sender;
@@ -44,9 +48,10 @@ contract MintMine is ERC721, Ownable{
         emit Minter(_owner);
     }
 
-    function Burn(uint256 _id) public onlyOwner {
-        _burn(_id);
-        emit Burnt(_id);
+    function Burn(uint256 _tokenId) public onlyOwner {
+        _burn(_tokenId);
+        tokenIdToAddress[_tokenId] = address(0);
+        emit Burnt(_tokenId);
     }
 
     function SafeTransfer(address _from, address _to, uint256 _tokenId) public onlyOwner {
