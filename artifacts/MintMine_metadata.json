@@ -64,6 +64,32 @@
 				"anonymous": false,
 				"inputs": [
 					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					}
+				],
+				"name": "Burnt",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					}
+				],
+				"name": "Minted",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
 						"indexed": true,
 						"internalType": "address",
 						"name": "previousOwner",
@@ -114,7 +140,7 @@
 						"type": "uint256"
 					}
 				],
-				"name": "burnt",
+				"name": "Transfered",
 				"type": "event"
 			},
 			{
@@ -122,26 +148,80 @@
 				"inputs": [
 					{
 						"indexed": false,
-						"internalType": "uint256",
+						"internalType": "address",
 						"name": "value",
-						"type": "uint256"
+						"type": "address"
 					}
 				],
-				"name": "minted",
+				"name": "TransferedTo",
 				"type": "event"
 			},
 			{
-				"anonymous": false,
 				"inputs": [
 					{
-						"indexed": false,
 						"internalType": "uint256",
-						"name": "value",
+						"name": "_id",
 						"type": "uint256"
 					}
 				],
-				"name": "transfered",
-				"type": "event"
+				"name": "Burn",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_tokenURI",
+						"type": "string"
+					}
+				],
+				"name": "Create",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_id",
+						"type": "uint256"
+					}
+				],
+				"name": "Mint",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_from",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_id",
+						"type": "uint256"
+					}
+				],
+				"name": "SafeTransfer",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			},
 			{
 				"inputs": [
@@ -178,19 +258,6 @@
 					}
 				],
 				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "_id",
-						"type": "uint256"
-					}
-				],
-				"name": "burn",
-				"outputs": [],
-				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -234,24 +301,6 @@
 					}
 				],
 				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "_to",
-						"type": "address"
-					},
-					{
-						"internalType": "uint256",
-						"name": "_id",
-						"type": "uint256"
-					}
-				],
-				"name": "mint",
-				"outputs": [],
-				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -430,29 +479,6 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "_from",
-						"type": "address"
-					},
-					{
-						"internalType": "address",
-						"name": "_to",
-						"type": "address"
-					},
-					{
-						"internalType": "uint256",
-						"name": "_id",
-						"type": "uint256"
-					}
-				],
-				"name": "transfer",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
 						"name": "from",
 						"type": "address"
 					},
@@ -563,11 +589,11 @@
 	},
 	"sources": {
 		"MintMine.sol": {
-			"keccak256": "0xec75630497bf4214123c9a1536cad6d2267d12c981f79c3ac242106f471653c5",
+			"keccak256": "0xdfa90d37933d5413279e641159ac2223d2df12ad8d3e429f02ba945274103bf3",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://bdaa0bd8fbeaf235ff4eb79b691e38758ecf8e65cd24eb88b97d2d11cf6577ed",
-				"dweb:/ipfs/Qmao8fsNMWJzbpTUskrMk9yETFyPpHx1hvjUNeUPni6GAv"
+				"bzz-raw://69363dafca5cd8923f69d1f1a49067b6f48844805c101627d3b6e6e25b6bdb90",
+				"dweb:/ipfs/QmUSteg8q3qKfzZ1NyEfgUGZtG9JqbriBV55rbFJrHEsN7"
 			]
 		},
 		"https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/access/Ownable.sol": {

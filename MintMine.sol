@@ -6,27 +6,56 @@ import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contr
 
 contract MintMine is ERC721, Ownable{
 
-    event minted(uint256 value);
-    event burnt(uint256 value);
-    event transfered(uint256 value);
+    uint256 tokenCounter;
 
-    constructor() ERC721("",""){
+    mapping(uint256 => address) tokenIdToAddress;
+    mapping(uint256 => string) tokenIdtoTokenUri;
 
+    event Created(uint256 value);
+    event Minter(address value);
+    event Burnt(uint256 value);
+    event Transfered(uint256 value);
+    event TransferedTo(address value);
+
+
+
+    constructor() ERC721("",""){ 
+        tokenCounter = 0 ;
     }
 
-    function mint(address _to, uint256 _id) public onlyOwner{
-        _mint(_to, _id);
-        emit minted(_id);
+
+
+    function Create(string memory _tokenURI) public{
+        uint256 _tokenId = tokenCounter;
+        tokenIdtoTokenUri[_tokenId] = _tokenURI;
+        tokenIdToAddress[_tokenId] = msg.sender;
+
+        _setTokenURI(_tokenId, _tokenURI);
+        
+        tokenCounter +=1;    
+
+        emit Created(_tokenId);
     }
 
-    function burn(uint256 _id) public onlyOwner {
+    function Mint(uint256 _tokenId) public {
+        address _owner = tokenIdToAddress[_tokenId];
+        _safeMint(_owner, _tokenId,"");
+
+        emit Minter(_owner);
+    }
+
+    function Burn(uint256 _id) public onlyOwner {
         _burn(_id);
-        emit burnt(_id);
+        emit Burnt(_id);
     }
 
-    function transfer(address _from,address _to,uint256 _id) public onlyOwner {
-        safeTransferFrom(_from,_to,_id);
-        emit transfered(_id);
+    function SafeTransfer(address _from, address _to, uint256 _tokenId) public onlyOwner {
+        safeTransferFrom(_from,_to,_tokenId);
+
+        tokenIdToAddress[_tokenId] = _to;
+        
+        emit Transfered(_tokenId);
+        emit TransferedTo(_to);
     }
 }
 

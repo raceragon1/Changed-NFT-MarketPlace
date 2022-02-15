@@ -12,6 +12,7 @@ contract MintPalace is ERC20, Ownable{
     }
 
     //store(Stake)
+    function Store
 
     //tear(mint)
 
