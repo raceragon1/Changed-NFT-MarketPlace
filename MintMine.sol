@@ -19,6 +19,11 @@ contract MintMine is ERC721, Ownable{
     event Transfered(uint256 value);
     event TransferedTo(address value);
 
+    modifier tokenOwner(uint _tokenId){
+        require(tokenIdToAddress[_tokenId] == msg.sender, "Not your Token");
+        _;
+    }
+
 
 
     constructor() ERC721("",""){ 
@@ -27,36 +32,35 @@ contract MintMine is ERC721, Ownable{
 
 
 
-    function Create(string memory _tokenURI) public{
+    function Mint(string memory _tokenURI) public{
         require(!URIs[_tokenURI], "Token URI already exists");
         URIs[_tokenURI] = true;
+
+        
         uint256 _tokenId = tokenCounter;
         tokenIdtoTokenUri[_tokenId] = _tokenURI;
         tokenIdToAddress[_tokenId] = msg.sender;
 
        //   tokenURI(_tokenId, _tokenURI);
-        
-        tokenCounter +=1;    
+    
+        _safeMint(msg.sender, _tokenId,"");
+        tokenCounter +=1;  
 
+        emit Minter(msg.sender); 
         emit Created(_tokenId);
+
     }
 
-    function Mint(uint256 _tokenId) public {
-        address _owner = tokenIdToAddress[_tokenId];
-        _safeMint(_owner, _tokenId,"");
 
-        emit Minter(_owner);
-    }
-
-    function Burn(uint256 _tokenId) public onlyOwner {
+    function Burn(uint256 _tokenId) public tokenOwner(_tokenId) {
+       
         _burn(_tokenId);
         tokenIdToAddress[_tokenId] = address(0);
         emit Burnt(_tokenId);
     }
 
-    function SafeTransfer(address _from, address _to, uint256 _tokenId) public onlyOwner {
+    function SafeTransfer(address _from, address _to, uint256 _tokenId) public tokenOwner(_tokenId) {
         safeTransferFrom(_from,_to,_tokenId);
-
         tokenIdToAddress[_tokenId] = _to;
         
         emit Transfered(_tokenId);
