@@ -83,7 +83,20 @@
 						"type": "uint256"
 					}
 				],
-				"name": "Minted",
+				"name": "Created",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "value",
+						"type": "address"
+					}
+				],
+				"name": "Minter",
 				"type": "event"
 			},
 			{
@@ -185,13 +198,8 @@
 			{
 				"inputs": [
 					{
-						"internalType": "address",
-						"name": "_to",
-						"type": "address"
-					},
-					{
 						"internalType": "uint256",
-						"name": "_id",
+						"name": "_tokenId",
 						"type": "uint256"
 					}
 				],
@@ -214,7 +222,7 @@
 					},
 					{
 						"internalType": "uint256",
-						"name": "_id",
+						"name": "_tokenId",
 						"type": "uint256"
 					}
 				],
@@ -589,11 +597,11 @@
 	},
 	"sources": {
 		"MintMine.sol": {
-			"keccak256": "0xdfa90d37933d5413279e641159ac2223d2df12ad8d3e429f02ba945274103bf3",
+			"keccak256": "0xe7782c6c03edeb04d60bcd94e66aa7d513c1ac219e8bdc2005417f89a7ac0bfe",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://69363dafca5cd8923f69d1f1a49067b6f48844805c101627d3b6e6e25b6bdb90",
-				"dweb:/ipfs/QmUSteg8q3qKfzZ1NyEfgUGZtG9JqbriBV55rbFJrHEsN7"
+				"bzz-raw://c6f56e2dcb159525021d2319ad0c51db998ff6b1bc271dc92ea2daf640fb5e4d",
+				"dweb:/ipfs/QmRijVUZ53xhE94sFgFvcUj8nTuvC1WFssVf2pPik8H5aE"
 			]
 		},
 		"https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/access/Ownable.sol": {

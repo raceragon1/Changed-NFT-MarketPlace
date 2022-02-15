@@ -30,7 +30,7 @@ contract MintMine is ERC721, Ownable{
         tokenIdtoTokenUri[_tokenId] = _tokenURI;
         tokenIdToAddress[_tokenId] = msg.sender;
 
-        _setTokenURI(_tokenId, _tokenURI);
+       //   tokenURI(_tokenId, _tokenURI);
         
         tokenCounter +=1;    
 
