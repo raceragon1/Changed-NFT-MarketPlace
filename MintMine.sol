@@ -7,7 +7,7 @@ import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contr
 contract MintMine is ERC721, Ownable{
 
     uint256 tokenCounter;
-
+    
 
     mapping(uint256 => address) tokenIdToAddress;
     mapping(uint256 => string) tokenIdtoTokenUri;
@@ -35,9 +35,9 @@ contract MintMine is ERC721, Ownable{
     function Mint(string memory _tokenURI) public{
         require(!URIs[_tokenURI], "Token URI already exists");
         URIs[_tokenURI] = true;
-
+        uint256 _tokenId;
         
-        uint256 _tokenId = tokenCounter;
+        _tokenId == tokenCounter;
         tokenIdtoTokenUri[_tokenId] = _tokenURI;
         tokenIdToAddress[_tokenId] = msg.sender;
 
