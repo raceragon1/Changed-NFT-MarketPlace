@@ -9,8 +9,8 @@ contract MintMine is ERC721, Ownable{
     uint256 tokenCounter;
     
 
-    mapping(uint256 => address) tokenIdToAddress;
-    mapping(uint256 => string) tokenIdtoTokenUri;
+    mapping(uint256 => address) NFTidToAddress;
+    mapping(uint256 => string) NFTidToTokenUri;
     mapping(string => bool) URIs;
 
     event Created(uint256 value);
@@ -19,8 +19,8 @@ contract MintMine is ERC721, Ownable{
     event Transfered(uint256 value);
     event TransferedTo(address value);
 
-    modifier tokenOwner(uint _tokenId){
-        require(tokenIdToAddress[_tokenId] == msg.sender, "Not your Token");
+    modifier tokenOwner(uint _nftId){
+        require(NFTidToAddress[_nftId] == msg.sender, "Not your Token");
         _;
     }
 
@@ -35,35 +35,36 @@ contract MintMine is ERC721, Ownable{
     function Mint(string memory _tokenURI) public{
         require(!URIs[_tokenURI], "Token URI already exists");
         URIs[_tokenURI] = true;
-        uint256 _tokenId;
         
-        _tokenId == tokenCounter;
-        tokenIdtoTokenUri[_tokenId] = _tokenURI;
-        tokenIdToAddress[_tokenId] = msg.sender;
+        uint _nftId;
+        
+        _nftId == tokenCounter;
+        NFTidToTokenUri[_nftId] = _tokenURI;
+        NFTidToAddress[_nftId] = msg.sender;
 
-       //   tokenURI(_tokenId, _tokenURI);
+       //   tokenURI(_nftId, _tokenURI);
     
-        _safeMint(msg.sender, _tokenId,"");
+        _safeMint(msg.sender, _nftId,"");
         tokenCounter +=1;  
 
         emit Minter(msg.sender); 
-        emit Created(_tokenId);
+        emit Created(_nftId);
 
     }
 
 
-    function Burn(uint256 _tokenId) public tokenOwner(_tokenId) {
+    function Burn(uint256 _nftId) public tokenOwner(_nftId) {
        
-        _burn(_tokenId);
-        tokenIdToAddress[_tokenId] = address(0);
-        emit Burnt(_tokenId);
+        _burn(_nftId);
+        NFTidToAddress[_nftId] = address(0);
+        emit Burnt(_nftId);
     }
 
-    function SafeTransfer(address _from, address _to, uint256 _tokenId) public tokenOwner(_tokenId) {
-        safeTransferFrom(_from,_to,_tokenId);
-        tokenIdToAddress[_tokenId] = _to;
+    function SafeTransfer(address _from, address _to, uint256 _nftId) public tokenOwner(_nftId) {
+        safeTransferFrom(_from,_to,_nftId);
+        NFTidToAddress[_nftId] = _to;
         
-        emit Transfered(_tokenId);
+        emit Transfered(_nftId);
         emit TransferedTo(_to);
     }
 }

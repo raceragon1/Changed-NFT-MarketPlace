@@ -82,6 +82,68 @@
 			{
 				"inputs": [
 					{
+						"internalType": "string",
+						"name": "name_",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "symbol_",
+						"type": "string"
+					}
+				],
+				"name": "Create",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_uniqueId",
+						"type": "uint256"
+					}
+				],
+				"name": "Revive",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "Store",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "totalSupply_",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_uniqueId",
+						"type": "uint256"
+					}
+				],
+				"name": "Tear",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
 						"internalType": "address",
 						"name": "owner",
 						"type": "address"
@@ -404,11 +466,11 @@
 	},
 	"sources": {
 		"MintPalace.sol": {
-			"keccak256": "0x4cf166100691e902d6864ea860fc3a7e5deaadef6b08bb1b682805604d8e4ad4",
+			"keccak256": "0x857fc9ee0fb20cfa390bb8b5c85e59838d9e6a87fa3ff421d59b2009a846e55e",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://8ec52a8bae83797a7005f8be419dde77c2f69e579355841d37ddfb2ff441f425",
-				"dweb:/ipfs/QmRPC6SgUPuoQya2tDjdUKyV9btmL13kpELp9YXUZCGUE6"
+				"bzz-raw://51c634dc254e4dd98dcc99f87b0018b0597982c6ee66e0fe973991195d58588c",
+				"dweb:/ipfs/QmbXKt5cxt3rFunPvRFbXsvUNjySizBoHBgAyGq1LMsTFY"
 			]
 		},
 		"https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/access/Ownable.sol": {
