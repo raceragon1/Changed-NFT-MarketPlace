@@ -142,6 +142,19 @@
 				"type": "function"
 			},
 			{
+				"inputs": [],
+				"name": "_totalSupply",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "address",
@@ -393,6 +406,25 @@
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "uniqueToAddress",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -466,11 +498,11 @@
 	},
 	"sources": {
 		"MintPalace.sol": {
-			"keccak256": "0x857fc9ee0fb20cfa390bb8b5c85e59838d9e6a87fa3ff421d59b2009a846e55e",
+			"keccak256": "0x9cff3cab6038dbc9ec6b541197b188e70d8a5e0ced515864f2614abacc33a628",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://51c634dc254e4dd98dcc99f87b0018b0597982c6ee66e0fe973991195d58588c",
-				"dweb:/ipfs/QmbXKt5cxt3rFunPvRFbXsvUNjySizBoHBgAyGq1LMsTFY"
+				"bzz-raw://9d6ecde726af983f5da56c34f9a6293736bcc46c0bfc506856deafd919c2fa9e",
+				"dweb:/ipfs/QmSfhooWUoxZGeEUU8akmmYAqiBYuLLgQNdegueVGRH3yG"
 			]
 		},
 		"https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/access/Ownable.sol": {
