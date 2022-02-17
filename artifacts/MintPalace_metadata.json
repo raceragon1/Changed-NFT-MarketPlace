@@ -6,7 +6,18 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "name_",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "symbol_",
+						"type": "string"
+					}
+				],
 				"stateMutability": "nonpayable",
 				"type": "constructor"
 			},
@@ -189,6 +200,24 @@
 				"type": "function"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_minter",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					}
+				],
+				"name": "mint",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "name",
 				"outputs": [
@@ -343,11 +372,11 @@
 	},
 	"sources": {
 		"MintPalace.sol": {
-			"keccak256": "0x8e26c274c50709b5a1357110f1af4bc6b9050a4f129551c8fbfbd5b0770bc05f",
+			"keccak256": "0x9ef853d9a847933d43a2bf2fea7597d76ab8b689ec4360c863e73449c0c94f2c",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://56660dae971cdd322ee3d1cbb9e477b655a828fbceff294d774f858c91defb63",
-				"dweb:/ipfs/QmcTX5LzesqpW9ma18cf5HH3Stnkbi8LTVNNFnsVoKtRx9"
+				"bzz-raw://d36036940a73f96c0cecb5dfdd07c02fef231d1e60b07ae8d7791f877bd3d28c",
+				"dweb:/ipfs/QmaoZxJpGXU8jJvtCR4xtCNi6wMCzbhqZfjGmfK38eJ5Ek"
 			]
 		},
 		"https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol": {
