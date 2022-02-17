@@ -372,11 +372,11 @@
 	},
 	"sources": {
 		"MintPalace.sol": {
-			"keccak256": "0x9ef853d9a847933d43a2bf2fea7597d76ab8b689ec4360c863e73449c0c94f2c",
+			"keccak256": "0x57f7fc23c632a52485196451dd15cc306190ba5b1803f5e4ef8258130a2ceb46",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://d36036940a73f96c0cecb5dfdd07c02fef231d1e60b07ae8d7791f877bd3d28c",
-				"dweb:/ipfs/QmaoZxJpGXU8jJvtCR4xtCNi6wMCzbhqZfjGmfK38eJ5Ek"
+				"bzz-raw://bb4115f6178d09f6554f73482976d657351a89c6959aceefc8be685c441ad9f9",
+				"dweb:/ipfs/QmQbyQG8Tu65cKTKvURgJA2Rwu7ZHFaoTxnqVbTQYc6v3o"
 			]
 		},
 		"https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol": {

@@ -4,7 +4,7 @@ import "./MintPalace.sol";
 import "./MintMine.sol";
 
 
-
+//ERC 20 Token Factory
 contract MintFactory{
 
     constructor() {

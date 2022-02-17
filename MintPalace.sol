@@ -4,13 +4,14 @@ import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contr
 
 
 
+//ERC 20 token Type
+//Had to create this to call internal function which i could use in mint Factory
 
 contract MintPalace is ERC20{
     string _name;
     string _symbol;
 
-
-    constructor(string memory name_, string memory symbol_) ERC20( _name, _symbol){
+    constructor(string memory name_, string memory symbol_) ERC20( name_, symbol_){
         _name = name_;
         _symbol = symbol_;
     }
