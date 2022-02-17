@@ -7,21 +7,30 @@ import "./MintMine.sol";
 //ERC 20 Token Factory
 contract MintFactory{
 
-    constructor() {
+    mapping (uint => bool) tokenToBool;
+    mapping (uint => address) tokenToAddress;
 
-    }
+    constructor() {}
+
 
     //store(Stake)
-    function Store(address _contarctAddress, uint _tokenId) public {
-        MintMine(_contarctAddress).safeTransfer(address(this), _tokenId);
+    function Store(address _NFTcontarctAddress, uint _NFTtokenId) public {
+        MintMine(_NFTcontarctAddress).safeTransfer(address(this), _NFTtokenId);
+        tokenToBool[_NFTtokenId] = true;
+        tokenToAddress[_NFTtokenId] = msg.sender;
     }
 
-
+    function retrive(address _NFTcontarctAddress, uint _NFTtokenId) public {
+        MintMine(_NFTcontarctAddress).safeTransfer(address(this), _NFTtokenId);
+        tokenToBool[_NFTtokenId] = true;
+        tokenToAddress[_NFTtokenId] = msg.sender;
+    }
 
     //create
     MintPalace[] public tokenContractArray;
 
-    function createTokenContract(string memory _name, string memory _symbol) public{
+    function createTokenContract(string memory _name, string memory _symbol, uint _NFTtokenId) public{
+       require(tokenToBool[_NFTtokenId] == true) ;
        MintPalace tokenContract = new MintPalace(_name,_symbol);
        tokenContractArray.push(tokenContract);    
     }
