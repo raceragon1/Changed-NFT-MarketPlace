@@ -24,8 +24,4 @@ contract MintMine is ERC721URIStorage{
         _burn(tokenId);   
     }
 
-    function safeTransfer(address _from, address _to, uint256 tokenId) public {
-        safeTransferFrom(_from,_to,tokenId);
-    }
-
 }

@@ -227,29 +227,6 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "_from",
-						"type": "address"
-					},
-					{
-						"internalType": "address",
-						"name": "_to",
-						"type": "address"
-					},
-					{
-						"internalType": "uint256",
-						"name": "tokenId",
-						"type": "uint256"
-					}
-				],
-				"name": "safeTransfer",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
 						"name": "from",
 						"type": "address"
 					},
@@ -458,11 +435,11 @@
 	},
 	"sources": {
 		"MintMine.sol": {
-			"keccak256": "0xd49574339dbca034a640ff7cfd451e2e9ca0dfc9f9ba0218f54f4276c0ce4932",
+			"keccak256": "0x5e61706990b805524445d7f1cef6374d97b38afc603f594345ca7dfc3822d2f5",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://2fb6c4c1b22db83550ca24aa1c447158320f693e5295caea34baceae0aab9475",
-				"dweb:/ipfs/QmXiQsUzytUFsBgR8TTe6NrX5HrGvHYL6EwWbv4PoySZm8"
+				"bzz-raw://45b6cf696c325203c554dd62d1cd0cef2ee29a34179c8826156676d1da2adfe8",
+				"dweb:/ipfs/QmPzdcJG3K9264xTqKLabE227CzzaLda9CLK8Qi5pcp73J"
 			]
 		},
 		"https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol": {
