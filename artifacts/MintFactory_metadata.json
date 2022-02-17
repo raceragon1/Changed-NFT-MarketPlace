@@ -73,6 +73,29 @@
 			{
 				"inputs": [
 					{
+						"internalType": "address",
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_tokenContarctIndex",
+						"type": "uint256"
+					}
+				],
+				"name": "transferERC20tokens",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
 						"internalType": "uint256",
 						"name": "_tokenContarctIndex",
 						"type": "uint256"
@@ -128,11 +151,11 @@
 	},
 	"sources": {
 		"MintFactory.sol": {
-			"keccak256": "0x5cacef56894d498a6b02cb32271b12e726e1acc281f20dc6ce18fc72afcf00f4",
+			"keccak256": "0x484940163de52a59d8f3f516d779d6ba4636f12af813f8986c14e04afffe1179",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://82a93fff5affe70db172137288f4f5614f9e5614b1542d8746e2b282422d8810",
-				"dweb:/ipfs/Qme6vhn5hmHL5qfgc7yLYNeu1opGQqu7gVHGfUS5C2KEMR"
+				"bzz-raw://aa8da5b58a9facdaeaead00fb90596869c2ae9881359ae4ece63777658f66d80",
+				"dweb:/ipfs/QmYtw8eed3TDbWJX2SXAi9CAF8632bWTdSMdKVHz7n42z9"
 			]
 		},
 		"MintMine.sol": {

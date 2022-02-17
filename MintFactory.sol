@@ -27,12 +27,17 @@ contract MintFactory{
 
 
     function mintERC20tokens(uint256 _amount, address _minter, uint256 _tokenContarctIndex) public{
-        //require you to deployer of contract
+        
         MintPalace(address(tokenContractArray[_tokenContarctIndex])).mint(_minter,_amount);
+    }
+
+    function transferERC20tokens(address _to, uint256 _amount, uint256 _tokenContarctIndex) public{
+        
+        MintPalace(address(tokenContractArray[_tokenContarctIndex])).transfer(_to,_amount);
     }
  
    function viewERC20tokens(uint256 _tokenContarctIndex) public view returns(string memory, string memory, uint256){
-        //require you to deployer of contract
+       
         MintPalace ERC20TokenContarct = MintPalace(address(tokenContractArray[_tokenContarctIndex]));
         return(ERC20TokenContarct.name(),ERC20TokenContarct.symbol(),ERC20TokenContarct.totalSupply());
     }    
