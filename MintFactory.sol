@@ -10,13 +10,14 @@ contract MintFactory{
     constructor() {
 
     }
-/*
+
     //store(Stake)
-    function Store(uint _tokenId) public {
-      MintMine.safeTransferFrom(msg.sender,address(this), _tokenId);
-        
+    function Store(address _contarctAddress, uint _tokenId) public {
+        MintMine(_contarctAddress).safeTransfer(address(this), _tokenId);
     }
-*/
+
+
+
     //create
     MintPalace[] public tokenContractArray;
 
@@ -27,17 +28,18 @@ contract MintFactory{
 
 
     function mintERC20tokens(uint256 _amount, address _minter, uint256 _tokenContarctIndex) public{
-        
         MintPalace(address(tokenContractArray[_tokenContarctIndex])).mint(_minter,_amount);
     }
 
+
+
     function transferERC20tokens(address _to, uint256 _amount, uint256 _tokenContarctIndex) public{
-        
         MintPalace(address(tokenContractArray[_tokenContarctIndex])).transfer(_to,_amount);
     }
  
+
+
    function viewERC20tokens(uint256 _tokenContarctIndex) public view returns(string memory, string memory, uint256){
-       
         MintPalace ERC20TokenContarct = MintPalace(address(tokenContractArray[_tokenContarctIndex]));
         return(ERC20TokenContarct.name(),ERC20TokenContarct.symbol(),ERC20TokenContarct.totalSupply());
     }    

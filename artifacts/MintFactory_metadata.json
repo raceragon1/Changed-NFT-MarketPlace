@@ -13,6 +13,24 @@
 			{
 				"inputs": [
 					{
+						"internalType": "address",
+						"name": "_contarctAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "Store",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
 						"internalType": "string",
 						"name": "_name",
 						"type": "string"
@@ -151,19 +169,19 @@
 	},
 	"sources": {
 		"MintFactory.sol": {
-			"keccak256": "0x484940163de52a59d8f3f516d779d6ba4636f12af813f8986c14e04afffe1179",
+			"keccak256": "0x81bc16a0cff3aeb508b3131fca5fc76d4c3bfab39205a50c3fe466f90f4f66be",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://aa8da5b58a9facdaeaead00fb90596869c2ae9881359ae4ece63777658f66d80",
-				"dweb:/ipfs/QmYtw8eed3TDbWJX2SXAi9CAF8632bWTdSMdKVHz7n42z9"
+				"bzz-raw://9fddade5debad216404213f0a8c79ddf4e8329891ce979acae8681c3adecb5fa",
+				"dweb:/ipfs/QmSpS2nADR3ecvfbVDmmoEKZrGW6MVUhuzqXL92vwGgztU"
 			]
 		},
 		"MintMine.sol": {
-			"keccak256": "0x3d79ef437ad76f8ddb9294dc55d50d88eb2d836f7c9af7705c1ff0a16cb8c477",
+			"keccak256": "0x21b66c7e77a9dfaa977de1b1a70d43fa732dabd51bc8f7b4850a37dc40d5c339",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://9786caef9f195cca0b0303dfdd12136c77783948bbd943cdc681cc4926eb322d",
-				"dweb:/ipfs/QmYuZkDr5ZZeaudS3DdAacJCytxFtikZyAb47i5uhczyXW"
+				"bzz-raw://14710a453a6b462e88535bddc9b81629239af13b3a51975e42814aa469d9bd93",
+				"dweb:/ipfs/QmV7PaxyVWhQnH23AQCsiAX3XL4dzWKm8ThwAyBpfdyHMj"
 			]
 		},
 		"MintPalace.sol": {
