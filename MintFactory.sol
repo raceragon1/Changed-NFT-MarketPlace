@@ -21,7 +21,7 @@ contract MintFactory{
 
     //store(Stake) function to deposit NFT
     function Store(address _NFTcontarctAddress, uint _NFTtokenId) public {
-        MintMine(_NFTcontarctAddress).safeTransfer(address(this), _NFTtokenId);
+        MintMine(_NFTcontarctAddress).transfer(msg.sender, address(this), _NFTtokenId);
         tokenToNFTAddress[_NFTtokenId] = _NFTcontarctAddress;
 
         tokenToBool[msg.sender][_NFTtokenId] = true;
@@ -29,6 +29,8 @@ contract MintFactory{
 
 
     //Function to retrive NFT
+    //Should be able to retrive without making token
+
     function retrive(uint256 _tokenContarctIndex) public {
         address ERC20Address = address(tokenContractArray[_tokenContarctIndex]);
 
@@ -36,10 +38,8 @@ contract MintFactory{
 
         uint _NFTtokenId = ERC20AddressToTokenId[ERC20Address];
         address _NFTcontarctAddress = tokenToNFTAddress[_NFTtokenId];
-        MintMine(_NFTcontarctAddress).safeTransfer(address(this), _NFTtokenId);
-
-        
-       
+        MintMine(_NFTcontarctAddress).transfer(msg.sender, address(this), _NFTtokenId);
+ 
     }
 
     //Array of ERC20 Contracts deployed

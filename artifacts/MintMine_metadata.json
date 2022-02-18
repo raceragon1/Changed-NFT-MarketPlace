@@ -240,24 +240,6 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "to",
-						"type": "address"
-					},
-					{
-						"internalType": "uint256",
-						"name": "tokenId",
-						"type": "uint256"
-					}
-				],
-				"name": "safeTransfer",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
 						"name": "from",
 						"type": "address"
 					},
@@ -392,6 +374,29 @@
 						"type": "uint256"
 					}
 				],
+				"name": "transfer",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					}
+				],
 				"name": "transferFrom",
 				"outputs": [],
 				"stateMutability": "nonpayable",
@@ -466,11 +471,11 @@
 	},
 	"sources": {
 		"MintMine.sol": {
-			"keccak256": "0xca4bb1f4174914f6e7a8cc70191a1c3f1ba32bdbe78e724b92bd5648a9cf8279",
+			"keccak256": "0xa7cbc7871d4094727fd14f673e070535dacb21a7210d9c101794e24c7520230d",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://77420866faffe3ce8bd34d4761343c3b5a3e0c9ba5e6103dfd819ebf23410e7d",
-				"dweb:/ipfs/QmQGXs9mgsDDw63mNQCeYpRtsqDXHWjMdEZTS9pURQhdfE"
+				"bzz-raw://0fd06f04a513742c4c13b02699a2935a0e6f61e5fc74fd806d432d5b4dd16578",
+				"dweb:/ipfs/QmPMiL6wtEbzTqibmmgYU3bg64vrV9ud4imrLd7j6JfLvn"
 			]
 		},
 		"https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol": {

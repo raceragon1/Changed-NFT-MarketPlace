@@ -187,19 +187,19 @@
 	},
 	"sources": {
 		"MintFactory.sol": {
-			"keccak256": "0xab605014db68dd15de1c2138d07e8317f22e03a9f257764252e9d4ef69ac46f3",
+			"keccak256": "0xf245860f2720081c5c1e9e93e2fa0159906b9207802e905c76f6ac2b33558dbd",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://229f655950d39604483ae8ad03f5f26d4c4eb3bd9052c7f79ddcb0ecdf55a9bd",
-				"dweb:/ipfs/QmXSw1vAqPuG5ZqZUeWTckQbXYJtTPGDD6rQBzjRZm3Coy"
+				"bzz-raw://d2d47ac5987085d08ebe9f120daceb5225ca224419cda518cb9de78d61297e0e",
+				"dweb:/ipfs/QmPuUaU1WsptpwLaqR6AQDbdHKy6giHY5J1twW9hDu41RM"
 			]
 		},
 		"MintMine.sol": {
-			"keccak256": "0xca4bb1f4174914f6e7a8cc70191a1c3f1ba32bdbe78e724b92bd5648a9cf8279",
+			"keccak256": "0xa7cbc7871d4094727fd14f673e070535dacb21a7210d9c101794e24c7520230d",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://77420866faffe3ce8bd34d4761343c3b5a3e0c9ba5e6103dfd819ebf23410e7d",
-				"dweb:/ipfs/QmQGXs9mgsDDw63mNQCeYpRtsqDXHWjMdEZTS9pURQhdfE"
+				"bzz-raw://0fd06f04a513742c4c13b02699a2935a0e6f61e5fc74fd806d432d5b4dd16578",
+				"dweb:/ipfs/QmPMiL6wtEbzTqibmmgYU3bg64vrV9ud4imrLd7j6JfLvn"
 			]
 		},
 		"MintPalace.sol": {
