@@ -8,10 +8,12 @@ import "./MintMine.sol";
 contract MintFactory{
 
     //creating mapping of NFT stored to make an condition for minitng ERC20 tokens against it
-    mapping (uint => bool) tokenToBool; 
+    mapping (address => mapping(uint => bool)) tokenToBool;
+
+    mapping (address => uint) ERC20AddressToTokenId; 
     
     //Creating mapping of NFT to address (original staker) that deposited the NFT 
-    mapping (uint => address) tokenToAddress; 
+    mapping (uint => address) tokenToNFTAddress; 
 
     constructor() {}
 
@@ -19,16 +21,24 @@ contract MintFactory{
     //store(Stake) function to deposit NFT
     function Store(address _NFTcontarctAddress, uint _NFTtokenId) public {
         MintMine(_NFTcontarctAddress).safeTransfer(address(this), _NFTtokenId);
-        tokenToBool[_NFTtokenId] = true;
-        tokenToAddress[_NFTtokenId] = msg.sender;
+        tokenToNFTAddress[_NFTtokenId] = _NFTcontarctAddress;
+
+        tokenToBool[msg.sender][_NFTtokenId] = true;
     }
 
 
     //Function to retrive NFT
-    function retrive(address _NFTcontarctAddress, uint _NFTtokenId) public {
+    function retrive(uint256 _tokenContarctIndex) public {
+        address ERC20Address = address(tokenContractArray[_tokenContarctIndex]);
+
+        MintPalace(ERC20Address).burnall();
+
+        uint _NFTtokenId = ERC20AddressToTokenId[ERC20Address];
+        address _NFTcontarctAddress = tokenToNFTAddress[_NFTtokenId];
         MintMine(_NFTcontarctAddress).safeTransfer(address(this), _NFTtokenId);
-        tokenToBool[_NFTtokenId] = true;
-        tokenToAddress[_NFTtokenId] = msg.sender;
+
+        
+       
     }
 
     //Array of ERC20 Contracts deployed
@@ -36,7 +46,8 @@ contract MintFactory{
 
     //create, creating ERC 20 tokens for Stored NFTs
     function createTokenContract(string memory _name, string memory _symbol, uint _NFTtokenId) public{
-       require(tokenToBool[_NFTtokenId] == true) ;
+       require(tokenToBool[msg.sender][_NFTtokenId] == true) ;
+       
        MintPalace tokenContract = new MintPalace(_name,_symbol);
        tokenContractArray.push(tokenContract);    
     }

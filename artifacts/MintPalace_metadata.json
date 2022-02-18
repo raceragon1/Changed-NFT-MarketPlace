@@ -140,6 +140,13 @@
 			},
 			{
 				"inputs": [],
+				"name": "burnall",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "decimals",
 				"outputs": [
 					{
@@ -372,11 +379,11 @@
 	},
 	"sources": {
 		"MintPalace.sol": {
-			"keccak256": "0x57f7fc23c632a52485196451dd15cc306190ba5b1803f5e4ef8258130a2ceb46",
+			"keccak256": "0xc90ed9e17849b663c7fe67bd4a112a415dfa235da5875f7ad14250f096f70183",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://bb4115f6178d09f6554f73482976d657351a89c6959aceefc8be685c441ad9f9",
-				"dweb:/ipfs/QmQbyQG8Tu65cKTKvURgJA2Rwu7ZHFaoTxnqVbTQYc6v3o"
+				"bzz-raw://eb59e3c19514eb237b31efaeda07c38b1ef2ca8875a3b70725135688806eabd6",
+				"dweb:/ipfs/QmNnMnroDf3bDhca6wMjti7So8bbEcCreXUYrNT2e7c67H"
 			]
 		},
 		"https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol": {

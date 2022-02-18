@@ -20,4 +20,9 @@ contract MintPalace is ERC20{
         _mint(_minter, _amount);
     }
 
+    function burnall() public{
+        uint _amount = totalSupply();
+        _burn(msg.sender, _amount);
+    }
+
 }

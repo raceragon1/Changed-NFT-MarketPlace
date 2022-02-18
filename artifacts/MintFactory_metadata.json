@@ -14,12 +14,12 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "_contarctAddress",
+						"name": "_NFTcontarctAddress",
 						"type": "address"
 					},
 					{
 						"internalType": "uint256",
-						"name": "_tokenId",
+						"name": "_NFTtokenId",
 						"type": "uint256"
 					}
 				],
@@ -39,6 +39,11 @@
 						"internalType": "string",
 						"name": "_symbol",
 						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_NFTtokenId",
+						"type": "uint256"
 					}
 				],
 				"name": "createTokenContract",
@@ -65,6 +70,19 @@
 					}
 				],
 				"name": "mintERC20tokens",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_tokenContarctIndex",
+						"type": "uint256"
+					}
+				],
+				"name": "retrive",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -169,27 +187,27 @@
 	},
 	"sources": {
 		"MintFactory.sol": {
-			"keccak256": "0x81bc16a0cff3aeb508b3131fca5fc76d4c3bfab39205a50c3fe466f90f4f66be",
+			"keccak256": "0xab605014db68dd15de1c2138d07e8317f22e03a9f257764252e9d4ef69ac46f3",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://9fddade5debad216404213f0a8c79ddf4e8329891ce979acae8681c3adecb5fa",
-				"dweb:/ipfs/QmSpS2nADR3ecvfbVDmmoEKZrGW6MVUhuzqXL92vwGgztU"
+				"bzz-raw://229f655950d39604483ae8ad03f5f26d4c4eb3bd9052c7f79ddcb0ecdf55a9bd",
+				"dweb:/ipfs/QmXSw1vAqPuG5ZqZUeWTckQbXYJtTPGDD6rQBzjRZm3Coy"
 			]
 		},
 		"MintMine.sol": {
-			"keccak256": "0x21b66c7e77a9dfaa977de1b1a70d43fa732dabd51bc8f7b4850a37dc40d5c339",
+			"keccak256": "0xca4bb1f4174914f6e7a8cc70191a1c3f1ba32bdbe78e724b92bd5648a9cf8279",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://14710a453a6b462e88535bddc9b81629239af13b3a51975e42814aa469d9bd93",
-				"dweb:/ipfs/QmV7PaxyVWhQnH23AQCsiAX3XL4dzWKm8ThwAyBpfdyHMj"
+				"bzz-raw://77420866faffe3ce8bd34d4761343c3b5a3e0c9ba5e6103dfd819ebf23410e7d",
+				"dweb:/ipfs/QmQGXs9mgsDDw63mNQCeYpRtsqDXHWjMdEZTS9pURQhdfE"
 			]
 		},
 		"MintPalace.sol": {
-			"keccak256": "0x57f7fc23c632a52485196451dd15cc306190ba5b1803f5e4ef8258130a2ceb46",
+			"keccak256": "0xc90ed9e17849b663c7fe67bd4a112a415dfa235da5875f7ad14250f096f70183",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://bb4115f6178d09f6554f73482976d657351a89c6959aceefc8be685c441ad9f9",
-				"dweb:/ipfs/QmQbyQG8Tu65cKTKvURgJA2Rwu7ZHFaoTxnqVbTQYc6v3o"
+				"bzz-raw://eb59e3c19514eb237b31efaeda07c38b1ef2ca8875a3b70725135688806eabd6",
+				"dweb:/ipfs/QmNnMnroDf3bDhca6wMjti7So8bbEcCreXUYrNT2e7c67H"
 			]
 		},
 		"https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol": {
