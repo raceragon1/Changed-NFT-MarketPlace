@@ -10,6 +10,7 @@ contract MintFactory{
     //creating mapping of NFT stored to make an condition for minitng ERC20 tokens against it
     mapping (address => mapping(uint => bool)) tokenToBool;
 
+    //mapping ERC 20 token address to NFT id
     mapping (address => uint) ERC20AddressToTokenId; 
     
     //Creating mapping of NFT to address (original staker) that deposited the NFT 
@@ -47,7 +48,7 @@ contract MintFactory{
     //create, creating ERC 20 tokens for Stored NFTs
     function createTokenContract(string memory _name, string memory _symbol, uint _NFTtokenId) public{
        require(tokenToBool[msg.sender][_NFTtokenId] == true) ;
-       
+
        MintPalace tokenContract = new MintPalace(_name,_symbol);
        tokenContractArray.push(tokenContract);    
     }
