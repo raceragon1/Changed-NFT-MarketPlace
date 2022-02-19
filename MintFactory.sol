@@ -38,7 +38,7 @@ contract MintFactory{
 
         uint _NFTtokenId = ERC20AddressToTokenId[ERC20Address];
         address _NFTcontarctAddress = tokenToNFTAddress[_NFTtokenId];
-        MintMine(_NFTcontarctAddress).transfer(msg.sender, address(this), _NFTtokenId);
+        MintMine(_NFTcontarctAddress).transfer(address(this), msg.sender, _NFTtokenId);
  
     }
 

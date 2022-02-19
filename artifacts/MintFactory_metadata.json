@@ -187,11 +187,11 @@
 	},
 	"sources": {
 		"MintFactory.sol": {
-			"keccak256": "0xf245860f2720081c5c1e9e93e2fa0159906b9207802e905c76f6ac2b33558dbd",
+			"keccak256": "0xcdce50720eec8ec08b7cae0af5a06e65f4694f4b5cdba4dab660fcbcb2bae85f",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://d2d47ac5987085d08ebe9f120daceb5225ca224419cda518cb9de78d61297e0e",
-				"dweb:/ipfs/QmPuUaU1WsptpwLaqR6AQDbdHKy6giHY5J1twW9hDu41RM"
+				"bzz-raw://59c058620d3d3e2721453f8454f9d0ba319ee8190e52310855385fadc3b2abdf",
+				"dweb:/ipfs/QmVXHkgod9etmPwnKYUz19QHjSHcH5RSQdZbxmVNKbTAaa"
 			]
 		},
 		"MintMine.sol": {
