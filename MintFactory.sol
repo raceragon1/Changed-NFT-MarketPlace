@@ -11,13 +11,13 @@ contract MintFactory {
     MintPalace[] public tokenContractArray;
 
     //creating mapping of NFT stored to make an condition for minitng ERC20 tokens against it
-    mapping (address => mapping(uint => bool)) tokenToBool;
+    mapping(address => mapping(uint => bool)) tokenToBool;
 
     //mapping ERC 20 token address to NFT id
-    mapping (address => uint) ERC20AddressToTokenId; 
+    mapping(address => uint) ERC20AddressToTokenId; 
     
     //Creating mapping of NFT to address (original staker) that deposited the NFT 
-    mapping (uint => address) tokenToNFTAddress; 
+    mapping(uint => address) tokenToNFTAddress; 
 
     
     constructor() {}
