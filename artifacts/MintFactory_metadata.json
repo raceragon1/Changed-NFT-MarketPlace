@@ -187,27 +187,27 @@
 	},
 	"sources": {
 		"MintFactory.sol": {
-			"keccak256": "0xcdce50720eec8ec08b7cae0af5a06e65f4694f4b5cdba4dab660fcbcb2bae85f",
+			"keccak256": "0xf586635a5d4df3811eb7bfe45a6461046e6af35449662d880a548d77d2520673",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://59c058620d3d3e2721453f8454f9d0ba319ee8190e52310855385fadc3b2abdf",
-				"dweb:/ipfs/QmVXHkgod9etmPwnKYUz19QHjSHcH5RSQdZbxmVNKbTAaa"
+				"bzz-raw://7588fd7162c2723abbb438a3a3d8958a1f964506bc839fee170712aa1d0d41f1",
+				"dweb:/ipfs/Qmec6r6Y67zo5grzr5baDS12DVvePMnCcrTPCaKdKqVaYM"
 			]
 		},
 		"MintMine.sol": {
-			"keccak256": "0xa7cbc7871d4094727fd14f673e070535dacb21a7210d9c101794e24c7520230d",
+			"keccak256": "0xaae3034f835baa2c5506052b64849e45fbcd668c1a35a876e83bdeff06ae63b9",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://0fd06f04a513742c4c13b02699a2935a0e6f61e5fc74fd806d432d5b4dd16578",
-				"dweb:/ipfs/QmPMiL6wtEbzTqibmmgYU3bg64vrV9ud4imrLd7j6JfLvn"
+				"bzz-raw://08d0d27945b7d37c596c28f028bee2699174de916ac0f9b7b9555d5e1c815a71",
+				"dweb:/ipfs/QmNkWc35NM2sKv3KpsVKRuZmCXG7ArLTaJp8CNrZiyGZTD"
 			]
 		},
 		"MintPalace.sol": {
-			"keccak256": "0xc90ed9e17849b663c7fe67bd4a112a415dfa235da5875f7ad14250f096f70183",
+			"keccak256": "0xc7f5ccc7016b43650c04fe362c5560d1fc1e8aab94529e4d2fc1b0b3e796a8e0",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://eb59e3c19514eb237b31efaeda07c38b1ef2ca8875a3b70725135688806eabd6",
-				"dweb:/ipfs/QmNnMnroDf3bDhca6wMjti7So8bbEcCreXUYrNT2e7c67H"
+				"bzz-raw://b5d00fadb83a314a5b462eb434f978eb7b639c9d81fee133943bce6833629cd6",
+				"dweb:/ipfs/QmbzEMDfLUchpy3LPLuij7tbfu4ucq8ruA1KXyLuDGPVUs"
 			]
 		},
 		"https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol": {

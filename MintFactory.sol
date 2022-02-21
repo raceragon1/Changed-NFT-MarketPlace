@@ -30,7 +30,7 @@ contract MintFactory {
             address(this), 
             _NFTtokenId
         );
-        
+
         tokenToNFTAddress[_NFTtokenId] = _NFTcontarctAddress;
 
         tokenToBool[msg.sender][_NFTtokenId] = true;
@@ -97,11 +97,14 @@ contract MintFactory {
  
 
     //View token information
-   function viewERC20tokens(uint256 _tokenContarctIndex) public view returns (
-       string memory, 
-       string memory, 
-       uint256
-       ) 
+   function viewERC20tokens(uint256 _tokenContarctIndex) 
+       public 
+       view 
+       returns (
+            string memory, 
+            string memory, 
+            uint256
+        ) 
     {
         MintPalace ERC20TokenContarct = MintPalace(address(tokenContractArray[_tokenContarctIndex]));
 
