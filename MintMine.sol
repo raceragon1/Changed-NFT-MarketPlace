@@ -16,6 +16,7 @@ contract MintMine is ERC721URIStorage{
 
     Counters.Counter private tokenIdCounter;
 
+
     function mint(string memory _tokenURI) public {   
         uint tokenId = tokenIdCounter.current();
 
@@ -25,9 +26,11 @@ contract MintMine is ERC721URIStorage{
         tokenIdCounter.increment();
     }
 
+
     function burn(uint256 tokenId) public { 
         _burn(tokenId);   
     }
+
 
     function transfer(
         address from, 
@@ -38,6 +41,7 @@ contract MintMine is ERC721URIStorage{
     { 
         _transfer(from, to, tokenId);   
     }
+
 
     function contractAddress() view public returns(address) {
         return address(this);
