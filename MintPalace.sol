@@ -11,7 +11,7 @@ contract MintPalace is ERC20{
     string _name;
     string _symbol;
 
-    constructor(string memory name_, string memory symbol_) ERC20( name_, symbol_){
+    constructor(string memory name_, string memory symbol_) ERC20( name_, symbol_) {
         _name = name_;
         _symbol = symbol_;
     }

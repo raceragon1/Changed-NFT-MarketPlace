@@ -10,12 +10,13 @@ import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contr
 
 contract MintMine is ERC721URIStorage{
     
-    constructor() ERC721("MintMine","MMT"){ 
+    constructor() ERC721("MintMine","MMT") { 
     }
     using Counters for Counters.Counter;
+
     Counters.Counter private tokenIdCounter;
 
-    function mint(string memory _tokenURI) public{   
+    function mint(string memory _tokenURI) public {   
         uint tokenId = tokenIdCounter.current();
 
         _safeMint(msg.sender, tokenId,"");
@@ -28,11 +29,17 @@ contract MintMine is ERC721URIStorage{
         _burn(tokenId);   
     }
 
-    function transfer(address from, address to, uint256 tokenId) public { 
+    function transfer(
+        address from, 
+        address to, 
+        uint256 tokenId
+    ) 
+        public 
+    { 
         _transfer(from, to, tokenId);   
     }
 
-    function contractAddress()  view public returns(address){
+    function contractAddress() view public returns(address) {
         return address(this);
     }
 
