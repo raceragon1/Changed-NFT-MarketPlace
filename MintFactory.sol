@@ -24,7 +24,7 @@ contract MintFactory {
 
 
     //store(Stake) function to deposit NFT
-    function Store(address _NFTcontarctAddress, uint _NFTtokenId) public {
+    function store(address _NFTcontarctAddress, uint _NFTtokenId) public {
         MintMine(_NFTcontarctAddress).transfer(
             msg.sender, 
             address(this), 
