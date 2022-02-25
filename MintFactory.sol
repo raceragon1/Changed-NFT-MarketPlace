@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity 0.8.11;
-import "./MintPalace.sol";
+import "./ModErc20.sol";
 import "./MintMine.sol";
 
 
@@ -8,7 +8,7 @@ import "./MintMine.sol";
 contract MintFactory {
 
     //Array of ERC20 Contracts deployed
-    MintPalace[] public tokenContractArray;
+    ModErc20[] public tokenContractArray;
 
     //creating mapping of NFT stored to make an condition for minitng ERC20 tokens against it
     mapping(address => mapping(uint => bool)) tokenToBool;
@@ -72,18 +72,20 @@ contract MintFactory {
     }
 
     //Minting tokens
-    function mintERC20tokens(
+    function mintERC20Tokens(
         uint256 _amount, 
-        address _minter, 
-        uint256 _tokenContarctIndex
+       // uint256 _tokenContarctIndex
+       address _ERC20contarctAddress
     ) 
         public 
     {
-        MintPalace(address(tokenContractArray[_tokenContarctIndex])).mint(_minter,_amount);
+        address _minter = msg.sender;
+        MintPalace(_ERC20contarctAddress).mint(_minter,_amount);
+        //MintPalace(tokenContractArray[_tokenContarctIndex]).mint(_minter,_amount);
     }
 
 
-    //Transfering tokes
+    //Transfering tokens
     function transferERC20tokens(
         address _to, 
         uint256 _amount, 

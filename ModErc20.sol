@@ -7,7 +7,7 @@ import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contr
 //ERC 20 token Type
 //Had to create this to call internal function which i could use in mint Factory
 
-contract MintPalace is ERC20 {
+contract ModErc20 is ERC20 {
     string _name;
     string _symbol;
 
